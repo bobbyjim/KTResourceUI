@@ -1,0 +1,11 @@
+<div *ngIf="capture">
+
+  <h2>Capture Details</h2>
+  <div><span>id: </span>{{capture.capture_id}}</div>
+  <div><span>status: </span>{{capture.status}}</div>
+  <div><span>number_of_packets:</span> {{capture.number_of_packets}}</div>
+  <div><span>file_url:</span> {{capture.file_url}}</div>
+  <div><span>max_packets_count:</span> {{capture.max_packets_count}}</div>
+
+  <button (click)="goBack()">go back</button>
+</div>

@@ -1,0 +1,15 @@
+<div *ngIf="avd">
+
+  <h2>{{avd.avd_name | uppercase}} Details</h2>
+  <div><span>id: </span>{{avd.avd_id}}</div>
+  <div><span>description: </span>{{avd.description}}</div>
+  <div><span>address:</span> {{avd.ip}}:{{avd.port}}</div>
+  <div><span>data_streams_count:</span> {{avd.data_streams_count}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="avd.avd_name" placeholder="name"/>
+    </label>
+  </div>
+
+  <button (click)="goBack()">go back</button>
+</div>
