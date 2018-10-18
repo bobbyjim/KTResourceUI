@@ -1,8 +1,8 @@
-<h2 appBetterHighlight>My AVDs</h2>
+<h2>My AVDs</h2>
 
 <ul class="avds">
   <li *ngFor="let avd of models">
-    <a routerLink="/avddetail/{{avd.avd_id}}">
+    <a appBetterHighlight routerLink="/avddetail/{{avd.avd_id}}">
       <span class="badge">{{avd.ip}}::{{avd.port}}</span> {{avd.avd_name}} {{avd.avd_id}}
     </a>
     <button class="delete" title="delete AVD"
