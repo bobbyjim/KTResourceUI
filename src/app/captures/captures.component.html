@@ -3,7 +3,7 @@
 <ul class="captures">
   <li *ngFor="let cap of captures">
     <a routerLink="/capturedetail/{{cap.capture_id}}">
-      <span class="badge">{{cap.capture_id}}</span> {{cap.capture_id}}
+      <span class="badge">{{cap.status}}</span> {{cap.capture_id}} ({{cap.number_of_packets}} packets)
     </a>
     <button class="delete" title="delete AVD"
             (click)="delete(cap)">x</button>
