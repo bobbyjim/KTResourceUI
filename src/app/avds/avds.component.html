@@ -1,11 +1,13 @@
 <h2>My AVDs</h2>
 
-<ul class="avds">
-  <li *ngFor="let avd of models">
-    <a appBetterHighlight routerLink="/avddetail/{{avd.avd_id}}">
-      <span class="badge">{{avd.ip}}::{{avd.port}}</span> {{avd.avd_name}} {{avd.avd_id}}
-    </a>
-    <button class="delete" title="delete AVD"
-            (click)="delete(avd)">x</button>
-  </li>
-</ul>
+<div *appUnless="noModels()">
+  <ul class="avds">
+    <li *ngFor="let avd of models">
+      <a [appBetterHighlight]="'mistyrose'" [defaultColor]="'transparent'" routerLink="/avddetail/{{avd.avd_id}}">
+        <span class="badge">{{avd.ip}}::{{avd.port}}</span> {{avd.avd_name}} {{avd.avd_id}}
+      </a>
+      <button class="delete" title="delete AVD"
+              (click)="delete(avd)">x</button>
+    </li>
+  </ul>
+</div>

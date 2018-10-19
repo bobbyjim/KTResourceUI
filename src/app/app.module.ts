@@ -15,6 +15,7 @@ import { AvdSearchComponent } from './avd-search/avd-search.component';
 import { CapturesComponent } from './captures/captures.component';
 import { CaptureDetailComponent } from './capture-detail/capture-detail.component';
 import { BetterHighlightDirective } from './directives/better-highlight/better-highlight.directive';
+import { UnlessDirective } from './directives/unless/unless.directive';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { BetterHighlightDirective } from './directives/better-highlight/better-h
     CapturesComponent,
     CaptureDetailComponent,
     BetterHighlightDirective,
+    UnlessDirective,
   ],
   imports: [
     BrowserModule,

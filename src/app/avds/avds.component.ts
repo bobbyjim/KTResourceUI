@@ -22,6 +22,9 @@ export class AvdsComponent implements OnInit {
       .subscribe(models => this.models = models);
   }
 
+  noModels():boolean {
+    return this.models.length == 0;
+  }
   delete(avd: Avd): void {
     this.models = this.models.filter(h => h !== avd);
     this.modelService.deleteAvd(avd).subscribe();
